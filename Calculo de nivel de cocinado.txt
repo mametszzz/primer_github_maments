@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+float calcula_ok(float porcentaje);
+int cocinado(float tiempo);
+
+int main() { // Añadidos los ()
+    float porcentaje, tiempo;
+    int diversion = 0;
+
+    printf("--------------\n-- Hola buenas, estoy low battery. --\n Introduce cuanto de dead (0-100): ");
+    scanf("%f", &porcentaje);
+
+    tiempo = calcula_ok(porcentaje);
+    
+    printf("Ok broskito, te quedan %.2f horas de diversion.\n", tiempo);
+    printf("Del 1 al diez estas...\n...Calculando...\n");
+
+    diversion = cocinado(tiempo); 
+
+    if (diversion >= 6) { 
+        printf("Efectivamente estas %d de cocinado, niveles altos de coccion.\n", diversion);
+    } else { 
+        printf("Vale, no estas tan cocinado, solamente un %d.\n", diversion);
+    }
+
+    return 0;
+}
+
+float calcula_ok(float x) {
+    float tiemp = (x * 100.0 / 50.0) / 10.0;
+    return tiemp;
+}
+
+int cocinado(float x) {
+    int divers = 0;
+    
+    if (x < 1.0) divers = 9;
+    else if (x < 3.0) divers = 5;
+    else divers = 2;
+    
+    return divers;
+}

@@ -1,0 +1,1 @@
+\\---Hola soy nuevo en esto de programar y aqui suelto mi primer proyecto, no serio de un pequeño juego que inventé en el tren cuando no tenia bateria en el movil, el programa calcula segun cuanta bateria tengas tu nivel de cocinado o jodido---//
